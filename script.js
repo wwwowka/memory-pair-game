@@ -47,21 +47,16 @@ game.innerHTML = partPair.map(createPair).join('');
 const cards = document.querySelectorAll('.card');
 
 [...cards].forEach((card)=>{
-  card.addEventListener( 'click', (e) => {
+  card.addEventListener( 'click', () => {
     card.classList.toggle('is-flipped');
-    checkCards(e);
+    checkCards();
   });
 });
 
-const checkCards = (e) => {
+const checkCards = () => {
+  const flippedCards = document.querySelectorAll('.is-flipped')
 
-  console.log(e);
-  const clickedCard = e.target;
-  console.log(clickedCard);
-
-
-/*   var flippedCards = document.querySelectorAll(".is-flipped");
-  
+        
      if (flippedCards.length === 2) {
     
       if (
@@ -69,21 +64,24 @@ const checkCards = (e) => {
         flippedCards[1].getAttribute("id")
         
       ){
-       
+       console.log(flippedCards.length);
         console.log("match");
-      }else{        
+        flippedCards.forEach((card)=>{
+          card.classList.replace('is-flipped', 'found-pair');
+        });
 
+      }else{
         console.log("wrong");
-        [...cards].forEach((card) => {
-          setTimeout(() => card.classList.remove('is-flipped'), 1000);
-             });
-        flippedCards = 0;
+
+       console.log(flippedCards.length);
+       setTimeout(() => 
+        [...cards].forEach((card)=>{
+          card.classList.remove('is-flipped');
+        })
+       ,500)
       }
     }else{
       
-      
-        
       console.log("over 3");
-    } */
-
+    } 
 }
