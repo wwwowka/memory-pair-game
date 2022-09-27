@@ -54,7 +54,6 @@ let foundCards = 0;
   });
 });
 
-
 const checkCards = () => {
   const flippedCards = document.querySelectorAll('.is-flipped');
 
@@ -82,7 +81,5 @@ const checkCards = () => {
     setTimeout(() => document.getElementById("title").innerHTML = 'You win!!!', 1500);
     setTimeout(() => document.getElementById("conteiner").classList.toggle('conteiner-leaf-fall'), 2500)
     setTimeout(() => document.getElementById("glass").classList.toggle('leaf-fall'), 3500);
-
-
   }
 }

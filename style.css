@@ -125,16 +125,18 @@ h1 {
   width: 150px;
   height: 150px;
 }
+
 @media screen and (min-width: 501px) {
-.card__face--front {
-  background: crimson;
-  background-image: url(img/card-back.svg);
-  background-size: 640px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left+50% top+100px;
+  .card__face--front {
+    background: crimson;
+    background-image: url(img/card-back.svg);
+    background-size: 640px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left+50% top+100px;
+  }
 }
-}
+
 .card__face--back {
   background: slateblue;
   transform: rotateY(180deg);
