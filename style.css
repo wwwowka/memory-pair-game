@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+@media screen and (max-width: 500px) {
+  .game {
+    zoom: 0.5;
+  }
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
