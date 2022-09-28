@@ -3,9 +3,57 @@
   padding: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 350px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
   .game {
+    width: 291px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .scene {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card__img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card__face--front {
+    background: crimson;
+    background-image: url(img/card-back-rot.svg);
+    background-size: 260px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top+90px;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 500px) {
+  h1 {
+    font-size: 27px;
+  }
+
+  .game {
+    width: 670px;
     zoom: 50%;
+  }
+
+  .scene {
+    width: 160px;
+    height: 160px;
+
+  }
+
+  .card__img {
+    width: 150px;
+    height: 150px;
   }
 
   .card__face--front {
@@ -14,7 +62,7 @@
     background-size: 640px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: left+50% top+170px;
+    background-position: center top+170px;
   }
 }
 
@@ -43,7 +91,6 @@ body {
   background-image: url(img/snowflake3.png), url(img/snowflake2.png);
   animation: snow 8s linear infinite;
   background-color: #0084ff3f;
-
 }
 
 .leaf-fall {
@@ -71,15 +118,12 @@ h1 {
 }
 
 .game {
-  width: 670px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .scene {
   display: inline-block;
-  width: 160px;
-  height: 160px;
   border: 2px solid #000000;
   margin: 0;
   perspective: 600px;
@@ -121,12 +165,22 @@ h1 {
   backface-visibility: hidden;
 }
 
-.card__img {
-  width: 150px;
-  height: 150px;
-}
-
 @media screen and (min-width: 501px) {
+
+  .game {
+    width: 670px;
+  }
+
+  .scene {
+    width: 160px;
+    height: 160px;
+  }
+
+  .card__img {
+    width: 150px;
+    height: 150px;
+  }
+
   .card__face--front {
     background: crimson;
     background-image: url(img/card-back.svg);
